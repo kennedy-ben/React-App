@@ -5,6 +5,7 @@ import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Index from "./pages/index";
 import Header from './pages/Header';
+import User from "./pages/users"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Index/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/user" element={<User />} />
           <Route path="/header" element={<Header />} />
         </Routes>
       </BrowserRouter>

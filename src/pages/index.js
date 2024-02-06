@@ -12,20 +12,15 @@ function Index() {
 
   return (
     <div>
-      {/* <Header /> */}
-      <br/>
-      <br/>
-    {/* <div className="center">
-        <input type="text" placeholder="Search" className="search-bar" />
-      </div> */}
+     
       <h1 style={headingStyle}>
         Hello Welcome To My New Project
       </h1>
-      {/* <User/>  */}
-      {/* <Episodes/> */}
-      <br/>
-      <br/>
-      <ul></ul>
+      <p>All these are the users</p>
+      <p>The page should tell you how many albums a user has</p>
+      <p>The page must run a GET request for the users</p>
+      <p>The page must run a GET request for the albums</p>
+    
     
     </div>
   );
