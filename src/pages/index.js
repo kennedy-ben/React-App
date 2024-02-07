@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import "./index.css";
 import Header from "./Header";
 
@@ -15,7 +16,6 @@ export default function Index() {
           fetch(`https://jsonplaceholder.typicode.com/albums?userId=${user.id}`)
             .then(resp => resp.json())
             .then(albumsData => {
-              
               user.albumCount = albumsData.length;
               setUsers([...usersData]);
             });
@@ -25,9 +25,8 @@ export default function Index() {
 
   return (
     <div>
-      {<Header />}
+      <Header />
       <div className="container">
-      
         <h1>User Albums</h1>
         <table>
           <thead>
@@ -39,7 +38,9 @@ export default function Index() {
           <tbody>
             {users.map(user => (
               <tr key={user.id}>
-                <td>{user.name}</td>
+                <td>
+                  <Link to={`/user/${user.id}`}>{user.name}</Link> {<user/>}
+                </td>
                 <td>{user.albumCount || 0}</td>
               </tr>
             ))}

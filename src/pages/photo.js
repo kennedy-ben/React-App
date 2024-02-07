@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header';
 
 export default function Album() {
-    const [albums, setAlbums] = useState([]);
+    const [photos, setPhotos] = useState([]);
 
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/albums")
+        fetch("https://jsonplaceholder.typicode.com/photos")
             .then(resp => resp.json())
             .then(data => {
-                setAlbums(data);
+                setPhotos(data);
             });
     }, []);
 
@@ -16,11 +16,11 @@ export default function Album() {
         <div>
             <Header />
             <div className="container">
-                <h1>Albums</h1>
+                <h1>Photos</h1>
                 <ul>
-                    {albums.map(album => (
-                        <li key={album.id}>
-                            <strong>{album.title}</strong> - User ID: {album.userId}
+                    {photos.map(photo => (
+                        <li key={photo.id}>
+                            <img src={photo.thumbnailUrl} alt={photo.title} /> {photo.title}
                         </li>
                     ))}
                 </ul>
@@ -28,4 +28,3 @@ export default function Album() {
         </div>
     );
 }
-
