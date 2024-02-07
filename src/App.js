@@ -18,7 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/user/:userId" element={<User />} />
           <Route path="/header" element={<Header />} />
-          <Route path="/album" element={<Album />} />
+          <Route path="/album/:albumId" element={<Album />} />
           <Route path="/photo" element={<Photo />} />
         </Routes>
       </BrowserRouter>
