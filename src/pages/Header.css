@@ -2,7 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-  background-color: grey;
-  color: white;
+  padding: 30px 30px;
+  background-color: #f0f0f0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.slogan {
+  font-size: 14px;
+  color: #666;
+}
+
+.header-right a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.header-right a:hover {
+  color: #007bff;
 }

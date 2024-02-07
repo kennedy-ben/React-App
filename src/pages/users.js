@@ -7,12 +7,10 @@ export default function UserPage({ match }) {
   const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
-    // Fetch user information
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
       .then(resp => resp.json())
       .then(userData => setUser(userData));
 
-    // Fetch albums for the user
     fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`)
       .then(resp => resp.json())
       .then(albumsData => setAlbums(albumsData));
@@ -27,7 +25,7 @@ export default function UserPage({ match }) {
           <div>
             <p>Name: {user.name}</p>
             <p>Email: {user.email}</p>
-            {/* Display other user information */}
+           
           </div>
         )}
         <h2>Albums</h2>
