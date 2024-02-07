@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+// import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
@@ -9,6 +10,7 @@ import User from "./pages/users"
 import Album from "./pages/album"
 
 function App() {
+  
   return (
     <div >
       <BrowserRouter>
@@ -21,6 +23,7 @@ function App() {
           <Route path="/album" element={<Album/>} />
         </Routes>
       </BrowserRouter>
+      
     </div>
   );
 }
