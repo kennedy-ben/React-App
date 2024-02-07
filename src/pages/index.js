@@ -1,5 +1,6 @@
-import Header from "./Header";
 import React, { useEffect, useState } from 'react';
+import "./index.css";
+import Header from "./Header";
 
 export default function Index() {
   const [users, setUsers] = useState([]);
@@ -21,26 +22,30 @@ export default function Index() {
         });
       });
   }, []);
+
   return (
     <div>
-      <Header />
-      <h1>User Albums</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>User</th>
-            <th>Albums Count</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.name}</td>
-              <td>{user.albumCount || 0}</td>
+      {<Header />}
+      <div className="container">
+      
+        <h1>User Albums</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Albums Count</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map(user => (
+              <tr key={user.id}>
+                <td>{user.name}</td>
+                <td>{user.albumCount || 0}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
