@@ -102,5 +102,9 @@ p {
     height: auto; 
     margin-bottom: 10px;
   }
-  
-  
+  p {
+    margin: 10px 0;
+} 
+h1, h2 {
+    color: blue;
+}
