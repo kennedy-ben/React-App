@@ -7,6 +7,7 @@ export default function Album() {
     const [album, setAlbum] = useState({});
     const [photos, setPhotos] = useState([]);
     const [albums, setAlbums] = useState([]);
+    const [activeAlbum, setActiveAlbum] = useState(null);
 
     const { albumId } = useParams();
 
@@ -25,25 +26,25 @@ export default function Album() {
             .then((data) => setAlbums(data));
     }, [albumId]);
 
+    const handleAlbumClick = (albumId) => {
+        setActiveAlbum(albumId);
+    };
+
     return (
         <div>
             <Header />
             <div className="container">
-                <h1>Album Information</h1>
-                <p><strong>Title:</strong> {album.title}</p>
-                <p><strong>User ID:</strong> {album.userId}</p>
-
-                <h2>All Albums</h2>
                 <div className="albums">
+                    <h2>All Albums</h2>
                     {albums.map((albumItem) => (
-                        <Link key={albumItem.id} to={`/album/${albumItem.id}`} className={albumItem.id === parseInt(albumId) ? 'active' : ''}>
+                        <Link key={albumItem.id} to={`/album/${albumItem.id}`} className={albumItem.id === parseInt(albumId) ? 'active' : ''} onClick={() => handleAlbumClick(albumItem.id)}>
                             <p>{albumItem.title}</p>
                         </Link>
                     ))}
                 </div>
 
-                <h2>Photos</h2>
-                <div className="photos">
+                <div className={`photos ${activeAlbum === parseInt(albumId) ? 'active' : ''}`}>
+                    <h2>Photos Of Selected Album</h2>
                     {photos.map((photo) => (
                         <div key={photo.id} className="photo">
                             <img src={photo.thumbnailUrl} alt={photo.title} />
