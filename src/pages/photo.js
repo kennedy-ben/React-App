@@ -12,6 +12,31 @@ export default function Album() {
       });
   }, []);
 
+  const handleTitleEdit = (photoId, newTitle) => {
+    
+    fetch(`https://jsonplaceholder.typicode.com/photos/${photoId}`, {
+      method: "PATCH", // or "PUT"
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: newTitle,
+      }),
+    })
+      .then((resp) => resp.json())
+      .then((updatedPhoto) => {
+
+        setPhotos((prevPhotos) =>
+          prevPhotos.map((photo) =>
+            photo.id === updatedPhoto.id ? updatedPhoto : photo
+          )
+        );
+      })
+      .catch((error) => {
+        console.error("Error updating photo title:", error);
+      });
+  };
+
   return (
     <div>
       <Header />
@@ -21,7 +46,11 @@ export default function Album() {
           {photos.map((photo) => (
             <li key={photo.id}>
               <img src={photo.thumbnailUrl} alt={photo.title} />
-              {photo.title}
+              <div
+                contentEditable
+                onBlur={(e) => handleTitleEdit(photo.id, e.target.innerText)}
+                dangerouslySetInnerHTML={{ __html: photo.title }}
+              />
             </li>
           ))}
         </ul>
