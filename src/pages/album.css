@@ -1,0 +1,53 @@
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.albums {
+    display: grid;
+    flex-wrap: wrap;
+    /* margin-right: 20px; */
+
+}
+
+.albums a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.albums a.active {
+    background-color: #ccc;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    
+}
+
+.photo {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+}

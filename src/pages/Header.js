@@ -9,7 +9,7 @@ function Header() {
       </div>
       <div className="header-right">
         <a href="/User">User</a>
-        <a href="/Album">Album</a>
+        <a href="/Album/:albumId">Album</a>
         <a href="/Photo">Photo</a>
       </div>
     </div>

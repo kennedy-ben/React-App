@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from './Header';
+import "./album.css"
 
 export default function Album() {
     const [album, setAlbum] = useState({});
