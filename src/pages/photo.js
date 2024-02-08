@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
+import "./photo.css"
 
 export default function Album() {
   const [photos, setPhotos] = useState([]);
