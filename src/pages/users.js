@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
+import "./user.css"; 
 
 function Users() {
   const [user, setUser] = useState({});
@@ -21,10 +22,10 @@ function Users() {
   }, [userId]);
 
   return (
-    <div>
+    <div className="user-container">
       <Header />
       <h2>User Information</h2>
-      <div>
+      <div className="user-info">
         <p>
           <strong>Name:</strong> {user.name}
         </p>
@@ -39,7 +40,7 @@ function Users() {
         </p>
       </div>
       <h2>Albums</h2>
-      <ul>
+      <ul className="album-list">
         {albums.map((album) => (
           <li key={album.id}>{album.title}</li>
         ))}
