@@ -30,10 +30,14 @@ export default function Album() {
         setActiveAlbum(albumId);
     };
 
+    const openPhotoInNewTab = (photoUrl) => {
+        window.open(photoUrl, '_blank');
+    };
+
     return (
         <div>
             <Header />
-            <div className="container">
+            <div className="album_container">
                 <div className="albums-container">
                     <div className="albums">
                         <h2>All Albums</h2>
@@ -50,7 +54,7 @@ export default function Album() {
                         <h2>Photos Of Selected Album</h2>
                         <div className="photo-grid">
                             {photos.map((photo, index) => (
-                                <div key={photo.id} className="photo">
+                                <div key={photo.id} className="photo" onClick={() => openPhotoInNewTab(photo.url)}>
                                     <img src={photo.thumbnailUrl} alt={photo.title} />
                                     <p>{photo.title}</p>
                                     <p><strong>User ID:</strong> {photo.userId}</p>
