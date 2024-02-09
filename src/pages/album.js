@@ -34,26 +34,30 @@ export default function Album() {
         <div>
             <Header />
             <div className="container">
-                <div className="albums">
-                    <h2>All Albums</h2>
-                    {albums.map((albumItem) => (
-                        <Link key={albumItem.id} to={`/album/${albumItem.id}`} className={albumItem.id === parseInt(albumId) ? 'active' : ''} onClick={() => handleAlbumClick(albumItem.id)}>
-                            <p>{albumItem.title}</p>
-                        </Link>
-                    ))}
+                <div className="albums-container">
+                    <div className="albums">
+                        <h2>All Albums</h2>
+                        {albums.map((albumItem) => (
+                            <Link key={albumItem.id} to={`/album/${albumItem.id}`} className={albumItem.id === parseInt(albumId) ? 'active' : ''} onClick={() => handleAlbumClick(albumItem.id)}>
+                                <p>{albumItem.title}</p>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
 
-                <div className={`photos ${activeAlbum === parseInt(albumId) ? 'active' : ''}`}>
-                    <h2>Photos Of Selected Album</h2>
-                    <div className="photo-grid">
-                        {photos.map((photo, index) => (
-                            <div key={photo.id} className="photo">
-                                <img src={photo.thumbnailUrl} alt={photo.title} />
-                                <p>{photo.title}</p>
-                                <p><strong>User ID:</strong> {photo.userId}</p>
-                                <p><strong>Album Title:</strong> {album.title}</p>
-                            </div>
-                        ))}
+                <div className="photos-container">
+                    <div className={`photos ${activeAlbum === parseInt(albumId) ? 'active' : ''}`}>
+                        <h2>Photos Of Selected Album</h2>
+                        <div className="photo-grid">
+                            {photos.map((photo, index) => (
+                                <div key={photo.id} className="photo">
+                                    <img src={photo.thumbnailUrl} alt={photo.title} />
+                                    <p>{photo.title}</p>
+                                    <p><strong>User ID:</strong> {photo.userId}</p>
+                                    <p><strong>Album Title:</strong> {album.title}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
