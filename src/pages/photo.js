@@ -40,7 +40,7 @@ export default function Album() {
     <div>
       <Header />
       <div className="container">
-        <h1>Photos</h1>
+        <h1>Photos Of All Albums</h1>
         <ul>
           {photos.map((photo) => (
             <li key={photo.id}>
