@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from './Header';
-import "./album.css"
+import "./album.css";
 
 export default function Album() {
     const [album, setAlbum] = useState({});
@@ -45,14 +45,16 @@ export default function Album() {
 
                 <div className={`photos ${activeAlbum === parseInt(albumId) ? 'active' : ''}`}>
                     <h2>Photos Of Selected Album</h2>
-                    {photos.map((photo) => (
-                        <div key={photo.id} className="photo">
-                            <img src={photo.thumbnailUrl} alt={photo.title} />
-                             <p>{photo.title}</p> 
-                            <p><strong>User ID:</strong> {photo.userId}</p>
-                            <p><strong>Album Title:</strong> {album.title}</p> 
-                        </div>
-                    ))}
+                    <div className="photo-grid">
+                        {photos.map((photo, index) => (
+                            <div key={photo.id} className="photo">
+                                <img src={photo.thumbnailUrl} alt={photo.title} />
+                                <p>{photo.title}</p>
+                                <p><strong>User ID:</strong> {photo.userId}</p>
+                                <p><strong>Album Title:</strong> {album.title}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
