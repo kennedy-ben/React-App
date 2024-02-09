@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
-import "./photo.css"
+import "./photo.css";
 
 export default function Album() {
   const [photos, setPhotos] = useState([]);
@@ -14,7 +14,6 @@ export default function Album() {
   }, []);
 
   const handleTitleEdit = (photoId, newTitle) => {
-    
     fetch(`https://jsonplaceholder.typicode.com/photos/${photoId}`, {
       method: "PATCH", // or "PUT"
       headers: {
@@ -26,7 +25,6 @@ export default function Album() {
     })
       .then((resp) => resp.json())
       .then((updatedPhoto) => {
-
         setPhotos((prevPhotos) =>
           prevPhotos.map((photo) =>
             photo.id === updatedPhoto.id ? updatedPhoto : photo
@@ -50,6 +48,7 @@ export default function Album() {
               <div
                 contentEditable
                 onBlur={(e) => handleTitleEdit(photo.id, e.target.innerText)}
+                data-placeholder="Enter a title"
                 dangerouslySetInnerHTML={{ __html: photo.title }}
               />
             </li>
