@@ -25,7 +25,7 @@ export default function Index() {
     <div>
       <Header />
       <div className="container">
-        <h1>User Albums</h1>
+        <h1>User's Albums</h1>
         <table>
           <thead>
             <tr>
