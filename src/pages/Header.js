@@ -8,7 +8,7 @@ function Header() {
         <span className="slogan">WELCOME</span>
       </div>
       <div className="header-right">
-        <a href="/User">User</a>
+        <a href="/User">Users</a>
         <a href="/Album/:albumId">Album</a>
         <a href="/Photo">Photo</a>
       </div>
