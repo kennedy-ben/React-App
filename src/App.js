@@ -6,6 +6,7 @@ import Header from "./pages/Header";
 import User from "./pages/users";
 import Album from "./pages/album";
 import Photo from "./pages/photo";
+import State from "./pages/state";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/state" element={<State />} />
           <Route path="/user/:userId" element={<User />} />
           <Route path="/header" element={<Header />} />
           <Route path="/album/:albumId" element={<Album />} />
