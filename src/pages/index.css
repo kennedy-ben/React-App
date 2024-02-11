@@ -1,0 +1,143 @@
+/* index.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: inline-block;
+    margin-left: auto;
+  }
+  
+  .login-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+  }
+  
+  .login-section {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .login-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .login-image img {
+    height: 100vh;
+    width: auto;
+  }
+  
+  .login-form {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    
+  }
+  
+  .login-form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+  }
+  
+  .login-form button {
+    background-color:#4285f4;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .login-form button:hover {
+    background-color: #4285f4;
+  }
+
+  .remember-forgot label {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+  }
+
+  .remember-forgot {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .remember-forgot input {
+    margin-right: 5px;
+  }
+  
+  .forgot-password {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .submit-button {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    background-color: #555;
+  }
+  
+  .or-divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #555;
+  }
+  
+  .google-signup {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  .google-signup:hover {
+    background-color: #3173cc;
+  }
+  
