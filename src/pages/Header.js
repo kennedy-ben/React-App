@@ -8,9 +8,9 @@ function Header() {
         <span className="slogan">WELCOME</span>
       </div>
       <div className="header-right">
-        <a href="/User">User</a>
-        <a href="/Album/:albumId">Album</a>
-        <a href="/Photo">Photo</a>
+        <a href="/User">Users</a>
+        <a href="/Album/:albumId">Albums</a>
+        <a href="/Photo">Photos</a>
       </div>
     </div>
   );
