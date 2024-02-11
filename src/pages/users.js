@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Header from "./Header";
 import "./user.css"; 
 
@@ -42,7 +42,9 @@ function Users() {
       <h2>Albums</h2>
       <ul className="album-list">
         {albums.map((album) => (
-          <li key={album.id}>{album.title}</li>
+          <li key={album.id}>
+            <Link to={`/albums/${album.id}`}>{album.title}</Link>
+          </li>
         ))}
       </ul>
     </div>
