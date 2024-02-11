@@ -15,7 +15,7 @@ export default function Index() {
           <div className="login-form">
             <h2>Login to Your Account</h2>
             <form>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Email" />
               <input type="password" placeholder="Password" />
               <div className="remember-forgot">
                 <label>
