@@ -16,7 +16,6 @@ function App() {
         <Routes>
           <Route index element={<Index />} />
           <Route path="/login" element={<Login />} />
-          
           <Route path="/state" element={<State />} />
           <Route path="/user/:userId" element={<User />} />
           <Route path="/header" element={<Header />} />
