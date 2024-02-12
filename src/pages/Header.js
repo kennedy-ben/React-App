@@ -1,3 +1,4 @@
+// Header.js
 import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router";
@@ -20,7 +21,7 @@ function Header() {
         <button
           onClick={handleLogout}
           style={{
-            backgroundColor: "##333" /* Green */,
+            backgroundColor: "white",
             border: "none",
             color: "black",
             padding: "10px 20px",
