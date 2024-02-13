@@ -5,6 +5,7 @@ import State from "./pages/state";
 import User from "./pages/users";
 import Photo from "./pages/photo";
 import Album from "./pages/album";
+import Albumall from "./pages/Albums/albumall";
 
 const routes = [
   {
@@ -33,11 +34,11 @@ const routes = [
     Element: Album,
     isAuthenticated: true,
   },
-  // {
-  //   path: "/albums",
-  //   Element: Albums,
-  //   isAuthenticated: true,
-  // },
+  {
+    path: "/albumall",
+    Element: Albumall,
+    isAuthenticated: true,
+  },
   {
     path: "/Photo",
     Element: Photo,
