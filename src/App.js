@@ -5,9 +5,8 @@ import AuthWrapper from "./AuthWrapper";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/React-App">
         <Routes>
-        
           {routes.map((route, index) => {
             const { Element, path } = route;
             if (route.isAuthenticated) {
