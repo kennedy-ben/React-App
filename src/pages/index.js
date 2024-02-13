@@ -18,6 +18,7 @@ function App() {
   const handleLoginError = () => {
     console.log("Login Failed");
   };
+
   return (
     <div className="landing-page">
       <header>
@@ -59,8 +60,6 @@ function App() {
             />
           </GoogleOAuthProvider>
         </div>
-
-        
       </main>
     </div>
   );
