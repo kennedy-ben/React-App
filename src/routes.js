@@ -10,8 +10,9 @@ const routes = [
   {
     path: "/",
     Element: Index,
-    isAuthenticated: false,
+    isAuthenticated: true,
   },
+  
   {
     path: "/users",
     Element: State,
