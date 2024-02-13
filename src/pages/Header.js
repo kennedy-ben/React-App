@@ -2,6 +2,7 @@
 import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
@@ -15,10 +16,16 @@ function Header() {
         <span className="slogan">WELCOME</span>
       </div>
       <div className="header-right">
-        <a href="/state">Users</a>
-        <a href="/Album/:albumId">Albums</a>
-        <a href="/Photo">Photos</a>
-        <button className="header-link" onClick={handleLogout}>Logout</button>      </div>
+        {/* <a href="/state">Users</a>
+        <a href="/Albums">Albums</a>
+        <a href="/Photo">Photos</a> */}
+        <Link to="/state">Users</Link>
+        <Link to="/albums">Albums</Link>
+        <Link to="/photo">Photos</Link>
+        <button className="header-link" onClick={handleLogout}>
+          Logout
+        </button>{" "}
+      </div>
     </div>
   );
 }
