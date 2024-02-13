@@ -15,10 +15,10 @@
   flex-grow: 1;
 }
 
-.header-right {
-  color: red;
+/* .header-right {
+  
   /* Your styles for the right side of the header */
-}
+
 
 @media (max-width: 768px) {
   .header {
