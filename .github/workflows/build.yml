@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 on:
   push:
     braches: ['master']
-   pull_request:
+   pull-request:
     branches: ['master']
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
