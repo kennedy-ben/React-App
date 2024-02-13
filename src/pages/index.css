@@ -1,33 +1,51 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.login-page {
+  font-family: Arial, sans-serif;
+}
+
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 100px; 
+  height: auto;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+}
+
+.google-login-button {
+  background-color: #db4437; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-login-button:hover {
+  background-color: #c1351d; 
+}
+
+.content {
   padding: 20px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.content h1 {
   margin-bottom: 20px;
 }
 
-.header-left {
-  flex-grow: 1;
+.content p {
+  margin-bottom: 10px;
 }
 
-/* .header-right {
-
-  color: red; */
-  /* Your styles for the right side of the header */
-/* } */
-
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-  }
-
-  .header-right {
-    align-self: flex-end;
-  }
+.content strong {
+  font-weight: bold;
 }

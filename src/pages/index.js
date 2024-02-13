@@ -2,9 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import Logo from "./logo.svg"; // Replace "logo.svg" with the path to your logo file
 import "./index.css";
 
-function App() {
+function LoginPage() {
   const navigate = useNavigate();
 
   const handleLoginSuccess = (credentialResponse) => {
@@ -20,9 +21,23 @@ function App() {
   };
 
   return (
-    <div className="landing-page">
-      <header>
-        <h1>Discover Something New. </h1>
+    <div className="login-page">
+      <header className="custom-header">
+        <div className="logo-container">
+          <img src={Logo} alt="Logo" className="logo" />
+        </div>
+        <div className="login-container">
+          <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">
+            <GoogleLogin
+              className="google-login-button"
+              onSuccess={handleLoginSuccess}
+              onError={handleLoginError}
+            />
+          </GoogleOAuthProvider>
+        </div>
+      </header>
+      <main className="content">
+        <h1>Discover Something New.</h1>
         {/* <p>Unlock the full potential with just one click!</p> */}
         <p>
           This web application provides a user-friendly interface for
@@ -45,24 +60,9 @@ function App() {
           <strong>Photo Page:</strong> Allows users to view and edit details of
           a selected photo, facilitating interaction with the photo content.
         </p>
-      </header>
-
-      <main>
-        <div className="login-section">
-          <h2 className="section-title">Login with Google</h2>
-
-          <p>Experience seamless authentication with your Google account.</p>
-          <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">
-            <GoogleLogin
-              className="google-login-button"
-              onSuccess={handleLoginSuccess}
-              onError={handleLoginError}
-            />
-          </GoogleOAuthProvider>
-        </div>
       </main>
     </div>
   );
 }
 
-export default App;
+export default LoginPage;
