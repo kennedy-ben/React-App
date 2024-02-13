@@ -27,4 +27,3 @@ All photos
 
 ![photos](https://github.com/kennedy-ben/React-App/assets/92169187/78343faa-8e2b-4b11-8e2d-b94ad881bcbb)
 
->>>>>>> origin/kennedy-ben-patch-1
