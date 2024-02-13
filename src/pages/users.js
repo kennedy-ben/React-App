@@ -22,8 +22,10 @@ function Users() {
   }, [userId]);
 
   return (
+    <div>
+    <Header/>
     <div className="user-container">
-      <Header />
+      
       <h2>User Information</h2>
       <div className="user-info">
         <p>
@@ -47,6 +49,7 @@ function Users() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }

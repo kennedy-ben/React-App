@@ -60,9 +60,7 @@ function App() {
           </GoogleOAuthProvider>
         </div>
 
-        {/* <div className="google-icon">
-          <img src="https://example.com/path/to/google-icon.svg" alt="Google Icon" />
-        </div> */}
+        
       </main>
     </div>
   );
