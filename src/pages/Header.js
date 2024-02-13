@@ -1,7 +1,14 @@
-import React from 'react';
-import './Header.css';
+// Header.js
+import React from "react";
+import "./Header.css";
+import { useNavigate } from "react-router";
 
 function Header() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    navigate("/");
+  };
   return (
     <div className="header">
       <div className="header-left">
@@ -11,7 +18,7 @@ function Header() {
         <a href="/state">Users</a>
         <a href="/Album/:albumId">Albums</a>
         <a href="/Photo">Photos</a>
-      </div>
+        <button className="header-link" onClick={handleLogout}>Logout</button>      </div>
     </div>
   );
 }

@@ -8,22 +8,35 @@ export default function Album() {
   const [photos, setPhotos] = useState([]);
   const [albums, setAlbums] = useState([]);
   const [activeAlbum, setActiveAlbum] = useState(null);
+  const [isLoading, setIsLoading] = useState(true); // Add loading state
 
   const { albumId } = useParams();
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}`)
-      .then((resp) => resp.json())
-      .then((data) => setAlbum(data));
+    setIsLoading(true); // Set loading to true when data fetching starts
 
-    fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`)
-      .then((resp) => resp.json())
-      .then((data) => setPhotos(data));
-
-    // Fetch all albums
-    fetch(`https://jsonplaceholder.typicode.com/albums`)
-      .then((resp) => resp.json())
-      .then((data) => setAlbums(data));
+    Promise.all([
+      fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}`).then(
+        (resp) => resp.json()
+      ),
+      fetch(
+        `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`
+      ).then((resp) => resp.json()),
+      fetch(`https://jsonplaceholder.typicode.com/albums`).then((resp) =>
+        resp.json()
+      ),
+    ])
+      .then(([albumData, photosData, albumsData]) => {
+        setAlbum(albumData);
+        setPhotos(photosData);
+        setAlbums(albumsData);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      })
+      .finally(() => {
+        setIsLoading(false); // Set loading to false when data fetching completes
+      });
   }, [albumId]);
 
   const handleAlbumClick = (albumId) => {
@@ -55,31 +68,35 @@ export default function Album() {
         </div>
 
         <div className="photos-container">
-          <div
-            className={`photos ${
-              activeAlbum === parseInt(albumId) ? "active" : ""
-            }`}
-          >
-            <h2>Photos Of Selected Album</h2>
-            <div className="photo-grid">
-              {photos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className="photo"
-                  onClick={() => openPhotoInNewTab(photo.url)}
-                >
-                  <img src={photo.thumbnailUrl} alt={photo.title} />
-                  <p>{photo.title}</p>
-                  {/* <p>
-                    <strong>User ID:</strong> {photo.userId}
-                  </p> */}
-                  <p>
-                    <strong>Album Title:</strong> {album.title}
-                  </p>
-                </div>
-              ))}
+          {isLoading ? ( // Show loader if data is still loading
+            <div className="loader"></div>
+          ) : (
+            <div
+              className={`photos ${
+                activeAlbum === parseInt(albumId) ? "active" : ""
+              }`}
+            >
+              <h2>Photos Of Selected Album</h2>
+              <div className="photo-grid">
+                {photos.map((photo, index) => (
+                  <div
+                    key={photo.id}
+                    className="photo"
+                    onClick={() => openPhotoInNewTab(photo.url)}
+                  >
+                    <img src={photo.thumbnailUrl} alt={photo.title} />
+                    <p>{photo.title}</p>
+                    {/* <p>
+                      <strong>User ID:</strong> {photo.userId}
+                    </p> */}
+                    <p>
+                      <strong>Album Title:</strong> {album.title}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
