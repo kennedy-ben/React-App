@@ -52,7 +52,7 @@ function App() {
           <h2 className="section-title">Login with Google</h2>
 
           <p>Experience seamless authentication with your Google account.</p>
-          <GoogleOAuthProvider clientId="1025046045192-s5juf2p41n3qc8n9d6jrrd056031e0lt.apps.googleusercontent.com">
+          <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">
             <GoogleLogin
               className="google-login-button"
               onSuccess={handleLoginSuccess}
