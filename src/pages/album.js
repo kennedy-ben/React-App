@@ -57,7 +57,7 @@ export default function Album() {
             {albums.map((albumItem) => (
               <Link
                 key={albumItem.id}
-                to={`/album/${albumItem.id}`}
+                to={`/albums/${albumItem.id}`}
                 className={albumItem.id === parseInt(albumId) ? "active" : ""}
                 onClick={() => handleAlbumClick(albumItem.id)}
               >

@@ -29,11 +29,15 @@ const routes = [
     isAuthenticated: true,
   },
   {
-    path: "/album/:albumId",
+    path: "/albums/:albumId",
     Element: Album,
     isAuthenticated: true,
   },
-
+  // {
+  //   path: "/albums",
+  //   Element: Albums,
+  //   isAuthenticated: true,
+  // },
   {
     path: "/Photo",
     Element: Photo,
