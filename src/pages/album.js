@@ -11,7 +11,7 @@ export default function Album() {
   const [isLoading, setIsLoading] = useState(true); // Add loading state
 
   const { albumId } = useParams();
-
+  console.log(">>>", photos);
   useEffect(() => {
     setIsLoading(true); // Set loading to true when data fetching starts
 
@@ -38,6 +38,10 @@ export default function Album() {
         setIsLoading(false); // Set loading to false when data fetching completes
       });
   }, [albumId]);
+
+  useEffect(() => {
+    setPhotos(photos);
+  }, [photos]);
 
   const handleAlbumClick = (albumId) => {
     setActiveAlbum(albumId);
