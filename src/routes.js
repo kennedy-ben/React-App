@@ -41,7 +41,7 @@ const routes = [
   },
 
   {
-    path: "notfound",
+    path: "/notfound",
     Element: NotFound,
     isAuthenticated: true,
   },
