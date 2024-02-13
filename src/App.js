@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import routes from "./routes";
 import AuthWrapper from "./AuthWrapper";
 
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/React-App">
+      <HashRouter>
         <Routes>
           {routes.map((route, index) => {
             const { Element, path } = route;
@@ -27,7 +27,7 @@ function App() {
             }
           })}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
