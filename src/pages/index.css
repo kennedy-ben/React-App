@@ -16,9 +16,11 @@
 }
 
 /* .header-right {
+
   color: red; */
   /* Your styles for the right side of the header */
 /* } */
+
 
 @media (max-width: 768px) {
   .header {
