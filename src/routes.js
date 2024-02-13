@@ -1,6 +1,6 @@
 import { Navigate } from "react-router";
 import NotFound from "./pages/NotFound";
-import Index from "./pages/index";
+// import Index from "./pages/index";
 import State from "./pages/state";
 import User from "./pages/users";
 import Photo from "./pages/photo";
@@ -8,8 +8,8 @@ import Album from "./pages/album";
 
 const routes = [
   {
-    path: "/",
-    Element: Index,
+    path: "/photo",
+    Element: Photo,
     isAuthenticated: true,
   },
   
