@@ -1,6 +1,6 @@
 import { Navigate } from "react-router";
 import NotFound from "./pages/NotFound";
-// import Index from "./pages/index";
+import Index from "./pages/index";
 import State from "./pages/state";
 import User from "./pages/users";
 import Photo from "./pages/photo";
@@ -8,11 +8,11 @@ import Album from "./pages/album";
 
 const routes = [
   {
-    path: "/photo",
-    Element: Photo,
-    isAuthenticated: true,
+    path: "/",
+    Element: Index,
+    isAuthenticated: false,
   },
-  
+
   {
     path: "/users",
     Element: State,
@@ -29,17 +29,16 @@ const routes = [
     isAuthenticated: true,
   },
   {
-    path:"/album/:albumId",
+    path: "/album/:albumId",
     Element: Album,
     isAuthenticated: true,
   },
 
   {
-    path:"/Photo",
+    path: "/Photo",
     Element: Photo,
     isAuthenticated: true,
   },
-
 
   {
     path: "notfound",
@@ -47,7 +46,6 @@ const routes = [
     isAuthenticated: true,
   },
 
-  
   {
     path: "*",
     Element: () => <Navigate to="/notfound" replace />,
@@ -56,5 +54,3 @@ const routes = [
 ];
 
 export default routes;
-
-
