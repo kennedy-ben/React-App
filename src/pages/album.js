@@ -90,9 +90,7 @@ export default function Album() {
                   >
                     <img src={photo.thumbnailUrl} alt={photo.title} />
                     <p>{photo.title}</p>
-                    {/* <p>
-                      <strong>User ID:</strong> {photo.userId}
-                    </p> */}
+                    
                     <p>
                       <strong>Album Title:</strong> {album.title}
                     </p>
