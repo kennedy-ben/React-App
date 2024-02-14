@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import Logo from "../assets/logo.png"; 
 import "./index.css";
 
 function Index() {
@@ -23,7 +24,7 @@ function Index() {
     <div className="login-page">
       <header className="custom-header">
         <div className="logo-container">
-         
+          <img src={Logo} alt="Logo" className="logo" />
         </div>
         <div className="login-container">
           <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">
