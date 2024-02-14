@@ -11,7 +11,7 @@ export default function Album() {
   const [isLoading, setIsLoading] = useState(true); // Add loading state
 
   const { albumId } = useParams();
-  console.log(">>>", photos);
+  
   useEffect(() => {
     setIsLoading(true); // Set loading to true when data fetching starts
 

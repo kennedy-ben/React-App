@@ -5,7 +5,7 @@ import State from "./pages/state";
 import User from "./pages/users";
 import Photo from "./pages/photo";
 import Album from "./pages/album";
-import Albumall from "./pages/Albums/albumall";
+import Albumall from "./pages/albumall";
 
 const routes = [
   {
