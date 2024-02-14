@@ -1,5 +1,3 @@
-/* photo.css */
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -16,7 +14,7 @@ ul {
 
 li {
   margin-bottom: 20px;
-  width: calc(50% - 20px); /* Adjust the width based on your spacing needs */
+  width: calc(50% - 20px); 
 }
 
 img {
@@ -43,13 +41,13 @@ img {
 }
 
 .loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
+  border: 8px solid #f3f3f3; 
+  border-top: 8px solid #3498db; 
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 1s linear infinite; /* Apply animation */
-  margin: auto; /* Center loader */
+  animation: spin 1s linear infinite; 
+  margin: auto; 
 }
 
 @keyframes spin {

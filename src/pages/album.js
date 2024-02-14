@@ -72,7 +72,7 @@ export default function Album() {
         </div>
 
         <div className="photos-container">
-          {isLoading ? ( // Show loader if data is still loading
+          {isLoading ? ( 
             <div className="loader"></div>
           ) : (
             <div

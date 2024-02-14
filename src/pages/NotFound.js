@@ -16,7 +16,7 @@ function NotFound() {
       <button
         onClick={handleGoBack}
         style={{
-          backgroundColor: "#007BFF",
+          backgroundColor: "darkblue",
           border: "none",
           color: "white",
           padding: "10px 20px",
