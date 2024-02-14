@@ -8,12 +8,12 @@ export default function Album() {
   const [photos, setPhotos] = useState([]);
   const [albums, setAlbums] = useState([]);
   const [activeAlbum, setActiveAlbum] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [isLoading, setIsLoading] = useState(true); 
 
   const { albumId } = useParams();
   
   useEffect(() => {
-    setIsLoading(true); // Set loading to true when data fetching starts
+    setIsLoading(true); 
 
     Promise.all([
       fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}`).then(
@@ -35,7 +35,7 @@ export default function Album() {
         console.error("Error fetching data:", error);
       })
       .finally(() => {
-        setIsLoading(false); // Set loading to false when data fetching completes
+        setIsLoading(false); 
       });
   }, [albumId]);
 

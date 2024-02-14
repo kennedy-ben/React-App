@@ -4,18 +4,18 @@ import "./photo.css";
 
 export default function Album() {
   const [photos, setPhotos] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/photos")
       .then((resp) => resp.json())
       .then((data) => {
         setPhotos(data);
-        setIsLoading(false); // Set loading to false when data is fetched
+        setIsLoading(false); 
       })
       .catch((error) => {
         console.error("Error fetching photos:", error);
-        setIsLoading(false); // Set loading to false on error
+        setIsLoading(false); 
       });
   }, []);
 
@@ -47,8 +47,8 @@ export default function Album() {
       <Header />
       <div className="container">
         <h1>Photos Of All Albums</h1>
-        {isLoading ? ( // Show loader if data is still loading
-          <div className="loader"></div> // Add loader CSS class
+        {isLoading ? ( 
+          <div className="loader"></div> 
         ) : (
           <ul>
             {photos.map((photo) => (
