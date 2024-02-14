@@ -5,7 +5,7 @@ import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import Logo from "./logo.svg"; // Replace "logo.svg" with the path to your logo file
 import "./index.css";
 
-function LoginPage() {
+function Index() {
   const navigate = useNavigate();
 
   const handleLoginSuccess = (credentialResponse) => {
@@ -65,4 +65,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default Index;
