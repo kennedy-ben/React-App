@@ -1,13 +1,3 @@
-// import React from 'react'
-
-// export default function Albums() {
-//   return (
-//     <div>
-//     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, voluptate? Exercitationem repudiandae rem, aperiam eius esse molestias deleniti alias, necessitatibus, eum impedit fugiat natus voluptatem nesciunt autem suscipit quibusdam. 
-//     Obcaecati!</p>
-//     </div>
-//   )
-// }
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "./Header";
@@ -18,12 +8,12 @@ export default function Albums() {
   const [photos, setPhotos] = useState([]);
   const [albums, setAlbums] = useState([]);
   const [activeAlbum, setActiveAlbum] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [isLoading, setIsLoading] = useState(true); 
 
   const { albumId } = useParams();
   
   useEffect(() => {
-    setIsLoading(true); // Set loading to true when data fetching starts
+    setIsLoading(true); 
 
     Promise.all([
       fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}`).then(
@@ -45,7 +35,7 @@ export default function Albums() {
         console.error("Error fetching data:", error);
       })
       .finally(() => {
-        setIsLoading(false); // Set loading to false when data fetching completes
+        setIsLoading(false); 
       });
   }, [albumId]);
 
