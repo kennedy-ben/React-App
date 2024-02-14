@@ -30,9 +30,7 @@
   cursor: pointer;
 }
 
-/* .google-login-button:hover {
-  background-color: blue; 
-} */
+
 
 .content {
   display: flex;
@@ -40,6 +38,7 @@
   padding: 20px;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
 }
 
 .content h1 {

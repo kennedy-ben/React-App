@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
-import Logo from "../assets/logo.png"; 
+import Logo2 from "../assets/logo 2.jpg"
 import "./index.css";
 
 function Index() {
@@ -24,7 +24,7 @@ function Index() {
     <div className="login-page">
       <header className="custom-header">
         <div className="logo-container">
-          <img src={Logo} alt="Logo" className="logo" />
+          <img src={Logo2} alt="Logo" className="logo" />
         </div>
         <div className="login-container">
           <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">
@@ -40,26 +40,16 @@ function Index() {
         <h1>Discover Something New.</h1>
         
         <p>
-          This web application provides a user-friendly interface for
-          authentication and accessing various content pages related to users,
-          albums, and photos.
+        This web app facilitates user authentication and seamless access to user, album, and photo content.
         </p>
         <p>
-          <strong>Home Page:</strong> Offers an overview of all users, including
-          the count of albums each user has.
-        </p>
+          <strong>Home Page:</strong> Displays users with album counts.</p>
         <p>
-          <strong>User Page:</strong> Provides detailed information about a
-          selected user, including the list of albums associated with that user.
-        </p>
+          <strong>User Page:</strong> Shows detailed user info and associated albums.</p>
         <p>
-          <strong>Album Page:</strong> Displays details about a selected album,
-          along with a list of photos belonging to that album.
-        </p>
+          <strong>Album Page:</strong> Provides album details and associated photos.</p>
         <p>
-          <strong>Photo Page:</strong> Allows users to view and edit details of
-          a selected photo, facilitating interaction with the photo content.
-        </p>
+          <strong>Photo Page:</strong>  Enables viewing and editing of photo details.</p>
       </main>
     </div>
   );
