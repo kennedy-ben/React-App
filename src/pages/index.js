@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
-import Logo3 from "../assets/logo 3.png"
+import Logo3 from "../assets/logo3.png"
 import "./index.css";
 
 function Index() {
