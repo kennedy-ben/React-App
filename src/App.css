@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: darkblue;
 }
 
 @keyframes App-logo-spin {
@@ -37,10 +37,10 @@
   }
 }
 .large-text {
-  font-size: 20px; /* Adjust the font size as needed */
+  font-size: 20px; 
 }
 
 .large-button {
-  font-size: 20px; /* Adjust the font size as needed */
-  padding: 12px 20px; /* Adjust padding as needed */
+  font-size: 20px; 
+  padding: 12px 20px; 
 }
