@@ -37,7 +37,7 @@ function Index() {
       </header>
       <main className="content">
         <h1>Discover Something New.</h1>
-        {/* <p>Unlock the full potential with just one click!</p> */}
+        
         <p>
           This web application provides a user-friendly interface for
           authentication and accessing various content pages related to users,
