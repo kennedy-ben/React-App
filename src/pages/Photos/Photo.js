@@ -45,7 +45,7 @@ export const Photo = () => {
   return (
     <div>
       <Header />
-      <div className="container">
+      <div className="container" data-testid="photo-component">
         <h1>Photos Of All Albums</h1>
         {isLoading ? (
           <div className="loader"></div>

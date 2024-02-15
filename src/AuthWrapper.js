@@ -8,7 +8,6 @@ const AuthWrapper = ({ children }) => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-      console.log(">>>>>>>>>>");
       return navigate("/");
     }
   }, [isAuthenticated, navigate]);

@@ -54,7 +54,7 @@ export const Albums = () => {
   return (
     <div>
       <Header />
-      <div className="album_container">
+      <div className="album_container"  data-testid="album-component">
         <div className="albums-container">
           <div className="albums">
             <h2>All Albums</h2>
