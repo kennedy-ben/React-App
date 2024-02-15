@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Header from "./Header";
+import { Header } from "../Header";
 import "./album.css";
 
-export default function Albums() {
+export const Album = () => {
   const [album, setAlbum] = useState({});
   const [photos, setPhotos] = useState([]);
   const [albums, setAlbums] = useState([]);
   const [activeAlbum, setActiveAlbum] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   const { albumId } = useParams();
-  
+
   useEffect(() => {
-    setIsLoading(true); 
+    setIsLoading(true);
 
     Promise.all([
       fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}`).then(
@@ -35,7 +35,7 @@ export default function Albums() {
         console.error("Error fetching data:", error);
       })
       .finally(() => {
-        setIsLoading(false); 
+        setIsLoading(false);
       });
   }, [albumId]);
 
@@ -72,7 +72,7 @@ export default function Albums() {
         </div>
 
         <div className="photos-container">
-          {isLoading ? ( // Show loader if data is still loading
+          {isLoading ? (
             <div className="loader"></div>
           ) : (
             <div
@@ -90,7 +90,7 @@ export default function Albums() {
                   >
                     <img src={photo.thumbnailUrl} alt={photo.title} />
                     <p>{photo.title}</p>
-                    
+
                     <p>
                       <strong>Album Title:</strong> {album.title}
                     </p>
@@ -103,4 +103,4 @@ export default function Albums() {
       </div>
     </div>
   );
-}
+};

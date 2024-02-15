@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "./Header";
+import { Header } from "../Header";
 import "./state.css";
 
-export default function State() {
+export const State = () => {
   const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true); 
+    setIsLoading(true);
 
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((resp) => resp.json())
@@ -35,7 +35,7 @@ export default function State() {
         console.error("Error fetching data:", error);
       })
       .finally(() => {
-        setIsLoading(false); 
+        setIsLoading(false);
       });
   }, []);
 
@@ -44,7 +44,7 @@ export default function State() {
       <Header />
       <div className="container">
         <h1>Users Albums</h1>
-        {isLoading ? ( 
+        {isLoading ? (
           <div className="loader"></div>
         ) : (
           <table>
@@ -69,4 +69,4 @@ export default function State() {
       </div>
     </div>
   );
-}
+};

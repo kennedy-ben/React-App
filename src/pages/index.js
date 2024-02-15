@@ -23,7 +23,7 @@ function Index() {
     <div className="login-page">
       <header className="custom-header">
         <div className="logo-container">
-        <h1 className="logo-text">Welcome</h1>
+          <h1 className="logo-text">Welcome</h1>
         </div>
         <div className="login-container">
           <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">
@@ -37,18 +37,26 @@ function Index() {
       </header>
       <main className="content">
         <h1>Discover Something New.</h1>
-        
+
         <p>
-        This web app facilitates user authentication and seamless access to user, album, and photo content.
+          This web app facilitates user authentication and seamless access to
+          user, album, and photo content.
         </p>
         <p>
-          <strong>Home Page:</strong> Displays users with album counts.</p>
+          <strong>Home Page:</strong> Displays users with album counts.
+        </p>
         <p>
-          <strong>User Page:</strong> Shows detailed user info and associated albums.</p>
+          <strong>User Page:</strong> Shows detailed user info and associated
+          albums.
+        </p>
         <p>
-          <strong>Album Page:</strong> Provides album details and associated photos.</p>
+          <strong>Album Page:</strong> Provides album details and associated
+          photos.
+        </p>
         <p>
-          <strong>Photo Page:</strong>  Enables viewing and editing of photo details.</p>
+          <strong>Photo Page:</strong> Enables viewing and editing of photo
+          details.
+        </p>
       </main>
     </div>
   );
