@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Header from "./Header";
-import "./user.css";
+import { Header } from "../Header";
+import "./User.css";
 
-function Users() {
+export const User = () => {
   const [user, setUser] = useState({});
   const [albums, setAlbums] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   const { userId } = useParams();
 
   useEffect(() => {
-    setIsLoading(true); 
+    setIsLoading(true);
 
     Promise.all([
       fetch(`https://jsonplaceholder.typicode.com/users/${userId}`).then(
         (response) => response.json()
       ),
-      fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`).then(
-        (response) => response.json()
-      ),
+      fetch(
+        `https://jsonplaceholder.typicode.com/albums?userId=${userId}`
+      ).then((response) => response.json()),
     ])
       .then(([userData, albumsData]) => {
         setUser(userData);
@@ -29,7 +29,7 @@ function Users() {
         console.error("Error fetching data:", error);
       })
       .finally(() => {
-        setIsLoading(false); 
+        setIsLoading(false);
       });
   }, [userId]);
 
@@ -53,7 +53,7 @@ function Users() {
           </p>
         </div>
         <h2>Albums</h2>
-        {isLoading ? ( 
+        {isLoading ? (
           <div className="loader"></div>
         ) : (
           <ul className="album-list">
@@ -67,6 +67,4 @@ function Users() {
       </div>
     </div>
   );
-}
-
-export default Users;
+};

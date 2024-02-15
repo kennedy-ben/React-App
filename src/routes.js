@@ -1,11 +1,9 @@
 import { Navigate } from "react-router";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/index";
-import State from "./pages/state";
-import User from "./pages/users";
-import Photo from "./pages/photo";
-import Album from "./pages/album";
-import Albums from "./pages/albums";
+import { State, User } from "./pages/User";
+import { Photo } from "./pages/Photos";
+import { Albums, Album } from "./pages/Albums";
 
 const routes = [
   {
@@ -46,14 +44,8 @@ const routes = [
   },
 
   {
-    path: "/notfound",
-    Element: NotFound,
-    isAuthenticated: true,
-  },
-
-  {
     path: "*",
-    Element: () => <Navigate to="/notfound" replace />,
+    Element: NotFound,
     isAuthenticated: true,
   },
 ];

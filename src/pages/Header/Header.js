@@ -4,7 +4,7 @@ import "./Header.css";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-function Header() {
+export const Header = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("authToken");
@@ -28,6 +28,4 @@ function Header() {
       </div>
     </div>
   );
-}
-
-export default Header;
+};

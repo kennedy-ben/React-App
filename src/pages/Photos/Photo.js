@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
+import { Header } from "../Header";
 import "./photo.css";
 
-export default function Album() {
+export const Photo = () => {
   const [photos, setPhotos] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/photos")
       .then((resp) => resp.json())
       .then((data) => {
         setPhotos(data);
-        setIsLoading(false); 
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching photos:", error);
-        setIsLoading(false); 
+        setIsLoading(false);
       });
   }, []);
 
@@ -47,8 +47,8 @@ export default function Album() {
       <Header />
       <div className="container">
         <h1>Photos Of All Albums</h1>
-        {isLoading ? ( 
-          <div className="loader"></div> 
+        {isLoading ? (
+          <div className="loader"></div>
         ) : (
           <ul>
             {photos.map((photo) => (
@@ -56,9 +56,7 @@ export default function Album() {
                 <img src={photo.thumbnailUrl} alt={photo.title} />
                 <div
                   contentEditable
-                  onBlur={(e) =>
-                    handleTitleEdit(photo.id, e.target.innerText)
-                  }
+                  onBlur={(e) => handleTitleEdit(photo.id, e.target.innerText)}
                   data-placeholder="Enter a title"
                   dangerouslySetInnerHTML={{ __html: photo.title }}
                 />
@@ -69,4 +67,4 @@ export default function Album() {
       </div>
     </div>
   );
-}
+};
