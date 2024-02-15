@@ -43,12 +43,13 @@
   
 
 
-|                |HOW CODE IS ORGANISED                     
-|----------------|-------------------------------|-----------------------------|
-|.src/: |Contains the application source code.       
-.components/:  |React components          
-.tests/:            |Contains jest test files.
-|.utils/:    |Utility functions.
+
+### HOW CODE IS ORGANISED     
+      
+- .src/: Contains the application source code. 
+- .components/:  React components          
+- .tests/:            Contains jest test files.
+- .utils/:    Utility functions.
   
 
 ### TECHNOLOGIES USED
