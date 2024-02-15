@@ -58,10 +58,10 @@ export const User = () => {
         {isLoading ? (
           <div className="loader"></div>
         ) : (
-          <ul className="album-list">
+          <ul className="album-list" data-testid="albumsData">
             {albums.map((album) => (
               <li key={album.id}>
-                <Link to={`/albums/${album.id}`}>{album.title}</Link>
+                <Link data-testid="albumLink" to={`/albums/${album.id}`}>{album.title}</Link>
               </li>
             ))}
           </ul>

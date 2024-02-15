@@ -75,7 +75,7 @@ export const Albums = () => {
           {isLoading ? ( // Show loader if data is still loading
             <div className="loader"></div>
           ) : (
-            <div
+            <div data-testid="picture-component"
               className={`photos ${
                 activeAlbum === parseInt(albumId) ? "active" : ""
               }`}
