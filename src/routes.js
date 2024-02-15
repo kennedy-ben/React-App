@@ -1,4 +1,3 @@
-import { Navigate } from "react-router";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/index";
 import { State, User } from "./pages/User";
