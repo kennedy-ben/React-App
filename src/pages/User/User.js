@@ -36,19 +36,21 @@ export const User = () => {
   return (
     <div>
       <Header />
-      <div className="user-container">
+      <div className="user-container" data-testid="user-component">
         <h2>User Information</h2>
+
         <div className="user-info">
-          <p>
+          <p data-testid="user-name">
             <strong>Name:</strong> {user.name}
           </p>
-          <p>
+          <p data-testid="user-email">
             <strong>Email:</strong> {user.email}
           </p>
-          <p>
+          <p data-testid="user-phone">
             <strong>Phone:</strong> {user.phone}
           </p>
-          <p>
+
+          <p data-testid="user-website">
             <strong>Website:</strong> {user.website}
           </p>
         </div>

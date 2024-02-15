@@ -10,7 +10,6 @@ function App() {
           {routes.map((route, index) => {
             const { Element, path } = route;
             if (route.isAuthenticated) {
-              console.log("auth route>>>>>>>>");
               return (
                 <Route
                   exact
@@ -24,7 +23,6 @@ function App() {
                 />
               );
             } else {
-              console.log("ffhgfhgfghfgh>");
               return <Route exact key={index} path="/" element={<Element />} />;
             }
           })}
