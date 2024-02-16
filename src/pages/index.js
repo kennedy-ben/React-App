@@ -23,7 +23,7 @@ function Index() {
     <div className="login-page">
       <header className="custom-header">
         <div className="logo-container">
-          <h1 className="logo-text">Welcome</h1>
+          <h1 className="logo-text">Welcome </h1>
         </div>
         <div className="login-container">
           <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">

@@ -7,16 +7,25 @@ export const Photo = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/photos")
-      .then((resp) => resp.json())
-      .then((data) => {
-        setPhotos(data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching photos:", error);
-        setIsLoading(false);
-      });
+    const storedPhotos = localStorage.getItem("photos");
+
+    if (storedPhotos) {
+      setPhotos(JSON.parse(storedPhotos));
+      setIsLoading(false);
+    } else {
+      fetch("https://jsonplaceholder.typicode.com/photos")
+        .then((resp) => resp.json())
+        .then((data) => {
+          setPhotos(data);
+          setIsLoading(false);
+          // Store photos data in localStorage
+          localStorage.setItem("photos", JSON.stringify(data));
+        })
+        .catch((error) => {
+          console.error("Error fetching photos:", error);
+          setIsLoading(false);
+        });
+    }
   }, []);
 
   const handleTitleEdit = (photoId, newTitle) => {
@@ -34,6 +43,16 @@ export const Photo = () => {
         setPhotos((prevPhotos) =>
           prevPhotos.map((photo) =>
             photo.id === updatedPhoto.id ? updatedPhoto : photo
+          )
+        );
+
+        // Update stored data in localStorage
+        localStorage.setItem(
+          "photos",
+          JSON.stringify(
+            photos.map((photo) =>
+              photo.id === updatedPhoto.id ? updatedPhoto : photo
+            )
           )
         );
       })

@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
 
 const AuthWrapper = ({ children }) => {
-  // const isAuthenticated = !!localStorage.getItem("authToken");
-  const isAuthenticated = true;
+  const isAuthenticated = !!localStorage.getItem("authToken");
 
   const navigate = useNavigate();
   useEffect(() => {

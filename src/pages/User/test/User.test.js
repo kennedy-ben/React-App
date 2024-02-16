@@ -12,22 +12,18 @@ test("renders user information details", () => {
 
   render(<User />);
   const headerComponent = screen.getByTestId("user-component");
+
   expect(headerComponent).toBeVisible();
   expect(screen.getByTestId("user-name")).toBeVisible();
-
-  expect(headerComponent).toBeVisible();
   expect(screen.getByTestId("user-email")).toBeVisible();
-
-  expect(headerComponent).toBeVisible();
   expect(screen.getByTestId("user-phone")).toBeVisible();
-
-  expect(headerComponent).toBeVisible();
   expect(screen.getByTestId("user-website")).toBeVisible();
 
   test.each((album) => {
     const albumsData = screen.toBeVisible("albumsData");
     expect(albumsData).toBeChecked();
 
+    
     const albumLink= screen.toBeVisible("albumsData");
     expect(albumLink).toHaveAttribute("href", `/albums/${album.id}`);
 
