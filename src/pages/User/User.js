@@ -6,7 +6,7 @@ import "./User.css";
 export const User = () => {
   const [user, setUser] = useState({});
   const [albums, setAlbums] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const { userId } = useParams();
 
@@ -54,9 +54,9 @@ export const User = () => {
             <strong>Website:</strong> {user.website}
           </p>
         </div>
-        <h2>Albums</h2>
+        <h2  data-testid="albulms-header">Albums</h2>
         {isLoading ? (
-          <div className="loader"></div>
+          <div data-testid="loading-indicator" className="loader"></div>
         ) : (
           <ul className="album-list" data-testid="albumsData">
             {albums.map((album) => (
