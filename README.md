@@ -91,7 +91,7 @@
 
 - All Albums: All albums of the user are displayed.
 
--![All Albums](https://github.com/kennedy-ben/React-App/assets/92169187/c26cd9f2-bace-47b7-97af-8fb184a80c19)
+-![All Ablums 2](https://github.com/kennedy-ben/React-App/assets/92169187/f4e6a65e-3fba-44da-aa70-bafeb0599db2)
 
 -Album Photos: Once you click any album its album photos are displayed.
 
