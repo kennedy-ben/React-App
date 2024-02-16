@@ -3,8 +3,7 @@ import { User } from "../User";
 import { render } from "../../utils";
 
 describe("Users tests", () => {
-  // jest.mock(fetch);
-
+  
   test("renders user information details", () => {
     render(<User />);
     const headerComponent = screen.getByTestId("user-component");
@@ -29,7 +28,7 @@ describe("Users tests", () => {
 
   test("shows loader when new data is being loaded", async () => {
     jest.mock("react-router-dom", () => ({
-      ...jest.requireActual("react-router-dom"), // use actual for all non-hook parts
+      ...jest.requireActual("react-router-dom"), 
       useParams: () => ({
         userId: "1",
       }),
@@ -37,13 +36,10 @@ describe("Users tests", () => {
 
     render(<User />);
 
-    //show loader when loading page content  after render
     expect(screen.queryByTestId("loading-indicator")).toBeVisible();
 
-    //loader not shown initially
     waitFor(() => {
       expect(screen.queryByTestId("loading-indicator")).toBeNull();
-      //expect 10 li items for users
     });
 
     waitFor(

@@ -2,7 +2,7 @@ import NotFound from "./pages/NotFound";
 import Index from "./pages/index";
 import { State, User } from "./pages/User";
 import { Photo } from "./pages/Photos";
-import { Albums, Album } from "./pages/Albums";
+import { Albums } from "./pages/Albums";
 
 const routes = [
   {
@@ -28,7 +28,7 @@ const routes = [
   },
   {
     path: "/albums/:albumId",
-    Element: Album,
+    Element: Albums,
     isAuthenticated: true,
   },
   {
