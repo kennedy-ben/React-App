@@ -45,6 +45,8 @@
 
 .content h1 {
   margin-bottom: 20px;
+  font-family: Garamond, serif;
+  font-size: 1.7em;
 }
 
 .content p {
@@ -55,16 +57,19 @@
   font-weight: bold;
 }
 .login-page {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1em;
 }
 
 .custom-header,
 .content {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
-.logo-text,
+
 h1,
 p {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }

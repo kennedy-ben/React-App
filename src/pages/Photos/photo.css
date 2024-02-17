@@ -55,25 +55,27 @@ img {
   100% { transform: rotate(360deg); }
 }
 .container {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
 .loader {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
 h1 {
-  font-family: monospace;
-}
+  font-family: Garamond, serif;
+  font-size: 1.2em;}
 
 ul {
-  font-family: monospace;
-}
+  font-family: Garamond, serif;
+  font-size: 1.2em;}
 
 li {
-  font-family: monospace;
-}
+  font-family: Garamond, serif;
+  font-size: 1.2em;}
 
 [data-placeholder] {
-  font-family: monospace;
-}
+  font-family: Garamond, serif;
+  font-size: 1.2em;}

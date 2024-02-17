@@ -34,20 +34,21 @@
   
   
   .loader {
-    font-family: monospace;
-  }
+    font-family: Garamond, serif;
+    font-size: 1.2em;  }
   
   h2 {
-    font-family: monospace;
-  }
+    font-family: Garamond, serif;
+    font-size: 1.2em;  }
   
   .user-info,
   .album-list {
-    font-family: monospace;
-  }
+    font-family: Garamond, serif;
+    font-size: 1.2em;  }
   
   .album-list li {
-    font-family: monospace;
+    font-family: Garamond, serif;
+  font-size: 1.2em;
   }
   
   [data-testid="user-name"],
@@ -58,5 +59,6 @@
   [data-testid="loading-indicator"],
   [data-testid="albumsData"],
   [data-testid="albumLink"] {
-    font-family: monospace;
+    font-family: Garamond, serif;
+  font-size: 1.2em;
   }
