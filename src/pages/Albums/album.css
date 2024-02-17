@@ -1,6 +1,7 @@
-.album_container {
-  display: flex;
-}
+@media only screen and (max-width: 768px) {
+  .album_container {
+    flex-direction: column; 
+  }
 
 .albums-container {
   flex: 1;
@@ -88,31 +89,31 @@
 }
 .album_container {
   font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .loader {
   font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 h2 {
   font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .albums p,
 .photos-container p {
   font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .photo p {
   font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .active p {
   font-family: Garamond, serif;
-  font-size: 1.2em;
-}
+  font-size: 1em;
+}}
