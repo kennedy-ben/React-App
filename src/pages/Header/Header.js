@@ -21,8 +21,14 @@ export const Header = () => {
         <Link data-testid="albums-link" to="/albums">
           Albums
         </Link>
-        <Link  data-testid="photo-link" to="/photo">Photos</Link>
-        <button className="header-link" onClick={handleLogout}>
+        <Link data-testid="photo-link" to="/photo">
+          Photos
+        </Link>
+        <button
+          data-testid="buttonToLogout"
+          className="header-link"
+          onClick={handleLogout}
+        >
           Logout
         </button>
       </div>

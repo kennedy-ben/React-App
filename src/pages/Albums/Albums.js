@@ -54,10 +54,10 @@ export const Albums = () => {
   return (
     <div>
       <Header />
-      <div className="album_container"  data-testid="album-component">
+      <div className="album_container" data-testid="album-component">
         <div className="albums-container">
           <div className="albums">
-            <h2>All Albums</h2>
+            <h2 data-testid="all-albums">All Albums</h2>
             {albums.map((albumItem) => (
               <Link
                 key={albumItem.id}
@@ -71,11 +71,11 @@ export const Albums = () => {
           </div>
         </div>
 
-        <div className="photos-container">
+        <div className="photos-container" data-testid="pic-component" >
           {isLoading ? ( // Show loader if data is still loading
             <div className="loader"></div>
           ) : (
-            <div data-testid="picture-component"
+            <div
               className={`photos ${
                 activeAlbum === parseInt(albumId) ? "active" : ""
               }`}

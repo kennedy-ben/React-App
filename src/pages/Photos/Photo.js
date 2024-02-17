@@ -67,13 +67,13 @@ export const Photo = () => {
       <div className="container" data-testid="photo-component">
         <h1>Photos Of All Albums</h1>
         {isLoading ? (
-          <div className="loader"></div>
+          <div data-testid="loadingg-indicator" className="loader"></div>
         ) : (
           <ul>
             {photos.map((photo) => (
-              <li key={photo.id}>
+              <li key={photo.id}> 
                 <img src={photo.thumbnailUrl} alt={photo.title} />
-                <div
+                <div data-testid="photoData"
                   contentEditable
                   onBlur={(e) => handleTitleEdit(photo.id, e.target.innerText)}
                   data-placeholder="Enter a title"
