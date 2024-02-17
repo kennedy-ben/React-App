@@ -24,7 +24,6 @@
 }
 
 .google-login-button {
-  /* background-color: #db4437;  */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -46,7 +45,7 @@
 .content h1 {
   margin-bottom: 20px;
   font-family: Garamond, serif;
-  font-size: 1.7em;
+  font-size: 1em;
 }
 
 .content p {
@@ -58,7 +57,7 @@
 }
 .login-page {
   font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .custom-header,
