@@ -1,6 +1,6 @@
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import { Albums } from "../albums";
+import { Albums } from "../Albums";
 
 describe("Render Albums", () => {
   test("render the albums components", () => {
@@ -51,7 +51,6 @@ describe("Render Albums", () => {
       });
     });
   });
-
 
   test("each album is clickable and triggers expected behavior", async () => {
     render(
