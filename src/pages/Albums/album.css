@@ -87,26 +87,32 @@
   100% { transform: rotate(360deg); }
 }
 .album_container {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
 .loader {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
 h2 {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
 .albums p,
 .photos-container p {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
 .photo p {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
 
 .active p {
-  font-family: monospace;
+  font-family: Garamond, serif;
+  font-size: 1.2em;
 }
