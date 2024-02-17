@@ -1,7 +1,8 @@
 .user-container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
+  font-family: monospace;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   background-color: #f9f9f9;
@@ -31,3 +32,31 @@
     display: block;
   }
   
+  
+  .loader {
+    font-family: monospace;
+  }
+  
+  h2 {
+    font-family: monospace;
+  }
+  
+  .user-info,
+  .album-list {
+    font-family: monospace;
+  }
+  
+  .album-list li {
+    font-family: monospace;
+  }
+  
+  [data-testid="user-name"],
+  [data-testid="user-email"],
+  [data-testid="user-phone"],
+  [data-testid="user-website"],
+  [data-testid="albulms-header"],
+  [data-testid="loading-indicator"],
+  [data-testid="albumsData"],
+  [data-testid="albumLink"] {
+    font-family: monospace;
+  }
