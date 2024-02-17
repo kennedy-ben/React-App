@@ -71,9 +71,10 @@ export const Photo = () => {
         ) : (
           <ul>
             {photos.map((photo) => (
-              <li key={photo.id}> 
+              <li key={photo.id}>
                 <img src={photo.thumbnailUrl} alt={photo.title} />
-                <div data-testid="photoData"
+                <div
+                  data-testid="photoData"
                   contentEditable
                   onBlur={(e) => handleTitleEdit(photo.id, e.target.innerText)}
                   data-placeholder="Enter a title"
