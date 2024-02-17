@@ -35,20 +35,20 @@
   
   .loader {
     font-family: Garamond, serif;
-    font-size: 1.2em;  }
+    font-size: 1em;  }
   
   h2 {
     font-family: Garamond, serif;
-    font-size: 1.2em;  }
+    font-size: 1em;  }
   
   .user-info,
   .album-list {
     font-family: Garamond, serif;
-    font-size: 1.2em;  }
+    font-size: 1em;  }
   
   .album-list li {
     font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
   }
   
   [data-testid="user-name"],
@@ -60,5 +60,5 @@
   [data-testid="albumsData"],
   [data-testid="albumLink"] {
     font-family: Garamond, serif;
-  font-size: 1.2em;
+  font-size: 1em;
   }

@@ -1,7 +1,6 @@
-@media only screen and (max-width: 768px) {
-  .album_container {
-    flex-direction: column; 
-  }
+.album_container {
+  display: flex;
+}
 
 .albums-container {
   flex: 1;
@@ -116,4 +115,4 @@ h2 {
 .active p {
   font-family: Garamond, serif;
   font-size: 1em;
-}}
+}
