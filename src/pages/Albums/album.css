@@ -86,3 +86,27 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.album_container {
+  font-family: monospace;
+}
+
+.loader {
+  font-family: monospace;
+}
+
+h2 {
+  font-family: monospace;
+}
+
+.albums p,
+.photos-container p {
+  font-family: monospace;
+}
+
+.photo p {
+  font-family: monospace;
+}
+
+.active p {
+  font-family: monospace;
+}

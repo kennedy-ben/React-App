@@ -54,3 +54,17 @@
 .content strong {
   font-weight: bold;
 }
+.login-page {
+  font-family: monospace;
+}
+
+.custom-header,
+.content {
+  font-family: monospace;
+}
+
+.logo-text,
+h1,
+p {
+  font-family: monospace;
+}
