@@ -18,7 +18,6 @@ export const Photo = () => {
         .then((data) => {
           setPhotos(data);
           setIsLoading(false);
-          // Store photos data in localStorage
           localStorage.setItem("photos", JSON.stringify(data));
         })
         .catch((error) => {
@@ -46,7 +45,6 @@ export const Photo = () => {
           )
         );
 
-        // Update stored data in localStorage
         localStorage.setItem(
           "photos",
           JSON.stringify(

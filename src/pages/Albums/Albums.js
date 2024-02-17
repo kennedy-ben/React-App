@@ -72,7 +72,7 @@ export const Albums = () => {
         </div>
 
         <div className="photos-container" data-testid="pic-component" >
-          {isLoading ? ( // Show loader if data is still loading
+          {isLoading ? (
             <div className="loader"></div>
           ) : (
             <div
