@@ -21,7 +21,7 @@ function Index() {
   return (
     <div className="login-page">
       <header className="custom-header">
-        <div className="icon-container">TuneSync Display</div>
+        <div className="icon-container">AlbumAura</div>
         <div>
           <GoogleOAuthProvider clientId="745853430499-24j63n4428u21ti4u8pvnuoritrfc7c4.apps.googleusercontent.com">
             <GoogleLogin
