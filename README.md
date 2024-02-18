@@ -77,7 +77,7 @@
 
 - Login Page: Here you can log in with Google.
 
-![Login with google form](https://github.com/kennedy-ben/React-App/assets/92169187/703bc0c5-00a0-487a-bc3c-97d2707b585a)
+![Login with Google](<login with google.png>)
 
 - User Albums: Display each user with his/her Albus.
 
