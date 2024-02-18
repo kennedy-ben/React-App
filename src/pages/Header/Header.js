@@ -11,6 +11,9 @@ export const Header = () => {
   };
   return (
     <div className="header" data-testid="header-component">
+      <div className="header-left">
+        <span className="slogan">WELCOME</span>
+      </div>
       <div className="header-right">
         <Link data-testid="users-link" to="/state">
           Users
