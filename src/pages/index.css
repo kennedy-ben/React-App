@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 .login-page {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .custom-header {
@@ -13,25 +13,22 @@
   padding: 10px 20px;
 }
 
-.logo-text {
-  font-size: 4px; 
-  margin: 0; 
+.icon-container {
+  margin-right: 10px;
 }
 
-.login-container {
-  display: flex;
-  align-items: center;
+.icon-image {
+  width: 30px;
+  height: auto;
 }
-
 .google-login-button {
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  justify-content: flex-end;
 }
-
-
 
 .content {
   display: flex;
@@ -66,9 +63,44 @@
   font-size: 1.2em;
 }
 
-
 h1,
 p {
   font-family: Garamond, serif;
   font-size: 1.2em;
+}
+
+.home-page_cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.home-page_card {
+  background: whitesmoke;
+  width: 48%;
+  padding: 40px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .home-page_card {
+    background: whitesmoke;
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+}
+.login-card {
+  display: flex;
+  justify-content: center;
+}
+.text {
+  display: flex;
+  justify-content: center;
 }

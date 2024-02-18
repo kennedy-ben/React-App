@@ -73,7 +73,7 @@
 
 - Home Page: Simple description of how the app works.
    
-![Home page](https://github.com/kennedy-ben/React-App/assets/92169187/41100a05-26a4-4889-8dab-e7200e0c421d)
+!![Landing page](<langin page 19.png>)
 
 - Login Page: Here you can log in with Google.
 
