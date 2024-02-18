@@ -35,6 +35,11 @@
   color: inherit;
   padding: 0;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-link:hover {
+  background-color: lightblue;
 }
 
 @media screen and (max-width: 768px) {
