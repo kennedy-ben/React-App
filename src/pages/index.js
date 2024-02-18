@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { jwtDecode } from "jwt-decode";
+// import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import "./index.css";
 
@@ -8,8 +8,7 @@ function Index() {
   const navigate = useNavigate();
 
   const handleLoginSuccess = (credentialResponse) => {
-    const decoded = jwtDecode(credentialResponse.credential);
-    console.log(decoded);
+    // const decoded = jwtDecode(credentialResponse.credential);
     localStorage.setItem("authToken", credentialResponse.credential);
 
     navigate("/state");

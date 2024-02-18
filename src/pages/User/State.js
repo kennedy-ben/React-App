@@ -50,8 +50,12 @@ export const State = () => {
           <table>
             <thead>
               <tr>
-                <th>User</th>
-                <th>Albums Count</th>
+                <th>
+                  <h6>User</h6>
+                </th>
+                <th>
+                  <h6>Albums Count</h6>
+                </th>
               </tr>
             </thead>
             <tbody>
