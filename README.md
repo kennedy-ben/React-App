@@ -73,36 +73,24 @@
 
 - Home Page: Simple description of how the app works.
    
-!![Landing page](<langin page 19.png>)
+![Home Page](<Landing Page (21).png>)
 
 - Login Page: Here you can log in with Google.
 
-![Login with Google](<login with google.png>)
+![Google Login](<Google Login (22).png>)
 
 - User Albums: Display each user with his/her Albus.
 
-- 
-![User Albums](https://github.com/kennedy-ben/React-App/assets/92169187/1b1cd815-b659-44cd-9c44-6abc0e4f8e88)
+![User](<Artists (23).png>)
 
-
-- User Information: Once you click the user his/her information with Albums is displayed.
-
-![User Information](https://github.com/kennedy-ben/React-App/assets/92169187/9fec5e98-1cf4-42e9-ae46-22ae982ce4ae)
 
 - All Albums: All albums of the user are displayed.
 
--![All Ablums 2](https://github.com/kennedy-ben/React-App/assets/92169187/f4e6a65e-3fba-44da-aa70-bafeb0599db2)
+![Albums](Albums(24).png)
 
--Album Photos: Once you click any album its album photos are displayed.
-
-
-![album photo ](https://github.com/kennedy-ben/React-App/assets/92169187/03f474da-5057-4a0b-960a-5bd14edb2d15)
 
 - All Photos: When you click the photo button all photos are displayed.
 
-- 
-![All photos page](https://github.com/kennedy-ben/React-App/assets/92169187/f2f664d4-b6c5-4913-a8ee-d93facfcedff)
+![Photos
+](Photos(25).png)
 
-- Loader: All pages have loaders.
-
-![Loader](https://github.com/kennedy-ben/React-App/assets/92169187/e08c3469-3f0d-4719-a3a6-ea56910b7cfc)
